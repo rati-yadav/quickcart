@@ -1,0 +1,128 @@
+.auth-page {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.auth-page .amazon-logo {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.auth-page .amazon-logo img {
+  width: 100px;
+}
+
+.auth-page .signin-box,
+.auth-page .signup-box {
+  max-width: 350px;
+  margin: 20px auto;
+  padding: 25px 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.auth-page .signin-box h1,
+.auth-page .signup-box h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.auth-page label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.auth-page input[type='email'],
+.auth-page input[type='password'],
+.auth-page input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #a6a6a6;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.auth-page .remember-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.auth-page .remember-me a {
+  text-decoration: none;
+  color: #007185;
+  font-size: 13px;
+}
+
+.auth-page .btn {
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-page .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-page .terms {
+  font-size: 12px;
+  margin-top: 15px;
+  color: #555;
+}
+
+.auth-page .terms a {
+  color: #007185;
+  text-decoration: none;
+}
+
+.auth-page hr {
+  border: none;
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 20px 0;
+}
+
+.auth-page .new-to-amazon {
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-page .new-to-amazon a,
+.auth-page .signin-link a {
+  text-decoration: none;
+  color: #007185;
+}
+
+.auth-page .signin-link {
+  font-size: 14px;
+  text-align: center;
+}
+
+.auth-page .auth-error {
+  color: #c40000;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.auth-page .auth-back {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.auth-page .auth-back a {
+  color: #007185;
+}

@@ -1,0 +1,130 @@
+.checkout-page {
+  min-height: 60vh;
+  background: #eaeded;
+  padding: 24px 16px 48px;
+}
+
+.checkout-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.checkout-panel {
+  background: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.checkout-panel h1,
+.checkout-panel h2 {
+  margin-bottom: 16px;
+  font-size: 1.35rem;
+}
+
+.checkout-primary-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: linear-gradient(180deg, #f7dfa5, #f0c14b);
+  border: 1px solid #a88734;
+  border-radius: 8px;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: filter 0.2s, transform 0.15s;
+}
+
+.checkout-primary-btn:hover:not(:disabled) {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.checkout-primary-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.checkout-error {
+  color: #b12704;
+  margin-top: 12px;
+}
+
+.checkout-success {
+  color: #067d62;
+  margin-top: 12px;
+}
+
+.checkout-muted {
+  margin-top: 12px;
+  color: #565959;
+}
+
+.checkout-summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.checkout-summary-list li {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.checkout-summary-list img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.checkout-summary-list small {
+  display: block;
+  color: #565959;
+}
+
+.checkout-total {
+  font-size: 1.1rem;
+}
+
+.checkout-link-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid #888c8c;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.checkout-link-btn:hover {
+  background: #f7fafa;
+}
+
+.checkout-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #007185;
+  font-size: 14px;
+}
+
+.checkout-link:hover {
+  color: #c7511f;
+  text-decoration: underline;
+}

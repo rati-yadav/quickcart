@@ -1,0 +1,135 @@
+.product-detail-page {
+  background: #fff;
+  min-height: 60vh;
+  padding: 24px 16px 48px;
+}
+
+.product-detail-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .product-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-detail-image {
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+.product-detail-image img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  display: block;
+}
+
+.product-detail-category {
+  color: #007185;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.product-detail-info h1 {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.product-detail-price {
+  color: #b12704;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.product-detail-desc {
+  color: #565959;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.product-detail-qty {
+  margin-bottom: 16px;
+}
+
+.product-detail-qty label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.product-detail-qty select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #888c8c;
+}
+
+.product-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.product-detail-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: filter 0.2s, transform 0.15s;
+}
+
+.product-detail-btn.primary {
+  background: linear-gradient(180deg, #f7dfa5, #f0c14b);
+  border: 1px solid #a88734;
+  color: #111;
+}
+
+.product-detail-btn.secondary {
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  color: #111;
+}
+
+.product-detail-btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.product-detail-delivery {
+  font-size: 14px;
+  color: #067d62;
+}
+
+.product-detail-related {
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+
+.product-detail-related h2 {
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+}
+
+.product-detail-loading,
+.product-detail-error {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.product-detail-error {
+  color: #b12704;
+}

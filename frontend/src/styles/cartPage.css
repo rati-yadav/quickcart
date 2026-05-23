@@ -1,0 +1,142 @@
+.cart-page {
+  min-height: 60vh;
+  background: #eaeded;
+  padding: 24px 16px 48px;
+}
+
+.cart-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cart-panel {
+  background: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.cart-panel h1 {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.cart-count-label {
+  color: #565959;
+  margin-bottom: 16px;
+}
+
+.cart-row {
+  display: grid;
+  grid-template-columns: 100px 1fr auto auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #e7e7e7;
+  transition: background 0.2s;
+}
+
+.cart-row:hover {
+  background: #fafafa;
+}
+
+.cart-row img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cart-row-title {
+  font-weight: 600;
+}
+
+.cart-row-price {
+  color: #b12704;
+  font-size: 14px;
+}
+
+.cart-qty label {
+  font-size: 12px;
+  color: #565959;
+}
+
+.cart-qty input {
+  width: 56px;
+  padding: 4px 8px;
+  border: 1px solid #888c8c;
+  border-radius: 4px;
+}
+
+.cart-delete-btn {
+  background: none;
+  border: none;
+  color: #007185;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 4px 0;
+}
+
+.cart-delete-btn:hover {
+  color: #c7511f;
+  text-decoration: underline;
+}
+
+.cart-subtotal-box {
+  background: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.cart-subtotal-box p {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.cart-checkout-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(180deg, #f7dfa5, #f0c14b);
+  border: 1px solid #a88734;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #111;
+  box-sizing: border-box;
+  transition: filter 0.2s, transform 0.15s;
+}
+
+.cart-checkout-btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.cart-signin-hint {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #565959;
+}
+
+.cart-msg-ok {
+  color: #067d62;
+  margin-bottom: 8px;
+}
+
+.cart-msg-err {
+  color: #b12704;
+  margin-bottom: 8px;
+}

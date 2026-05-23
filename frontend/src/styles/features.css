@@ -1,0 +1,341 @@
+.product-card-image-wrap,
+.product-detail-image {
+  position: relative;
+}
+
+/* Wishlist */
+.wishlist-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #565959;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.wishlist-btn.active {
+  color: #c45500;
+}
+
+.wishlist-btn.on-card {
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.product-card:hover .wishlist-btn.on-card,
+.wishlist-btn.on-card.active {
+  opacity: 1;
+}
+
+.wishlist-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.wishlist-page h1 {
+  font-size: 1.75rem;
+  margin: 0 0 1rem;
+}
+
+.wishlist-empty {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 4px;
+}
+
+/* Reviews */
+.product-reviews {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.product-reviews h2 {
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.review-form textarea {
+  width: 100%;
+  max-width: 480px;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #888c8c;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.review-list {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.review-list li {
+  border-top: 1px solid #e7e7e7;
+  padding: 1rem 0;
+}
+
+.review-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.review-error {
+  color: #b12704;
+}
+
+.star-rating {
+  color: #ffa41c;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.star-rating-sm {
+  font-size: 0.8rem;
+}
+
+.star-rating-value {
+  color: #007185;
+  font-size: 0.85rem;
+  margin-left: 4px;
+}
+
+.star-input button {
+  border: none;
+  background: none;
+  color: #ddd;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0 2px;
+}
+
+.star-input button.active {
+  color: #ffa41c;
+}
+
+.product-detail-rating {
+  margin: 0.25rem 0 0.75rem;
+}
+
+.product-detail-stock {
+  color: #007600;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-detail-stock.low {
+  color: #b12704;
+}
+
+.product-detail-wishlist {
+  margin-bottom: 0.75rem;
+}
+
+/* Order tracking */
+.order-tracking {
+  margin: 0.75rem 0 0;
+  padding: 0.75rem;
+  background: #f7fafa;
+  border-radius: 4px;
+}
+
+.order-tracking-id {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+.order-tracking-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+}
+
+.order-tracking-steps li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: #565959;
+  padding-right: 0.5rem;
+  border-right: 1px solid #ddd;
+}
+
+.order-tracking-steps li:last-child {
+  border-right: none;
+}
+
+.order-tracking-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  flex-shrink: 0;
+}
+
+.order-tracking-steps li.done .order-tracking-dot {
+  background: #067d62;
+}
+
+.order-tracking-steps li.current {
+  font-weight: 700;
+  color: #0f1111;
+}
+
+.order-shipping {
+  font-size: 0.85rem;
+  color: #565959;
+  margin: 0.5rem 0 0;
+  white-space: pre-line;
+}
+
+/* Search filters */
+.search-price-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.search-price-filters label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  gap: 0.25rem;
+}
+
+.search-price-filters input,
+.search-price-filters select {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #888c8c;
+  border-radius: 4px;
+  min-width: 90px;
+}
+
+.search-filter-apply {
+  padding: 0.4rem 1rem;
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Account addresses */
+.account-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.account-page h1 {
+  font-size: 1.75rem;
+  margin: 0 0 1rem;
+}
+
+.address-list {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.address-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.address-card.default {
+  border-color: #c45500;
+}
+
+.address-form {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  display: grid;
+  gap: 0.5rem;
+  max-width: 480px;
+}
+
+.address-form input {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #888c8c;
+  border-radius: 4px;
+}
+
+.checkout-address-block {
+  margin-bottom: 1.25rem;
+}
+
+.checkout-address-block h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+
+.checkout-address-option {
+  display: block;
+  padding: 0.65rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.checkout-address-option:has(input:checked) {
+  border-color: #c45500;
+  box-shadow: 0 0 0 1px #c45500;
+}
+
+.checkout-razorpay-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.checkout-razorpay-note {
+  font-size: 0.8rem;
+  color: #565959;
+  margin: 0;
+}
+
+.nav-wishlist {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 0.5rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.nav-wishlist:hover {
+  outline: 1px solid #fff;
+}

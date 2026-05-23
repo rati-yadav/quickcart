@@ -1,0 +1,83 @@
+.returns-orders {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #f6f6f6;
+  min-height: 50vh;
+}
+
+.returns-orders .container {
+  background-color: white;
+  padding: 40px;
+  max-width: 560px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.orders-list-wrap {
+  max-width: 720px;
+  text-align: left;
+}
+
+.orders-list-wrap h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.orders-error {
+  color: #c40000;
+}
+
+.orders-ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.order-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+
+.order-meta {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.order-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #333;
+}
+
+.container h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.container p {
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: #555;
+}
+
+.btn-signin {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #f0c14b;
+  color: #111;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 1px solid #a88734;
+  margin: 10px 0;
+}
+
+.btn-signin:hover {
+  background-color: #ddb347;
+}
