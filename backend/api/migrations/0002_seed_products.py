@@ -66,7 +66,7 @@ def seed_products(apps, schema_editor):
             'description': 'Programmable drip coffee maker.',
             'price': '99.00',
             'category': 'Kitchen',
-            'image_url': 'https://images.unsplash.com/photo-1517668808823-f9f7011b9a78?w=400',
+            'image_url': 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400',
         },
         {
             'name': 'Sunglasses',
@@ -98,7 +98,7 @@ def seed_products(apps, schema_editor):
             'description': '3-pack ruled notebooks.',
             'price': '12.00',
             'category': 'Stationery',
-            'image_url': 'https://images.unsplash.com/photo-1517842645767-c639b8808776?w=400',
+            'image_url': 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400',
         },
         {
             'name': 'Robot vacuum',
@@ -114,7 +114,7 @@ def seed_products(apps, schema_editor):
             'description': 'Curated snack gift box.',
             'price': '25.00',
             'category': 'Gifts',
-            'image_url': 'https://images.unsplash.com/photo-1549465220-5761434e73f0?w=400',
+            'image_url': 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400',
         },
         {
             'name': 'Safety mask pack',

@@ -26,14 +26,14 @@ from .serializers import (
 
 @api_view(['GET'])
 def health(request):
-    return Response({'status': 'ok', 'app': 'amazone'})
+    return Response({'status': 'ok', 'app': 'quickcart'})
 
 
 @api_view(['GET'])
 def api_root(request):
     return Response(
         {
-            'message': 'Amazone API is running.',
+            'message': 'QuickCart API is running.',
             'frontend': 'Open http://localhost:5173 in your browser (run: cd frontend && npm run dev)',
             'endpoints': {
                 'health': '/api/health/',

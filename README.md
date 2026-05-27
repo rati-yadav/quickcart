@@ -1,20 +1,23 @@
-# Amazone Clone
+# QuickCart
 
-Full-stack Amazon-style storefront: **React (Vite)** frontend, **Django REST** backend, **MySQL** (or SQLite for quick local dev).
+Full-stack e-commerce storefront: **React (Vite)** frontend, **Django REST** backend, **SQLite** database.
 
 ## Features
 
 - Home page with hero carousel, category boxes, product deals
-- **Sign in / Sign up** (token auth)
+- **Sign in / Sign up** (token authentication)
 - **Add to cart** with hover overlay on products + toast notification
 - **Cart** and **Checkout** with payment method picker (UPI, Card, Net Banking, Wallet, COD)
 - **Orders** page for logged-in users
 - **Product detail** page (`/product/:slug`)
 - **Search** with category filters (navbar search bar)
 - **Admin panel** (`/admin`) — manage products (staff only) + Django admin link
+- **Wishlist** feature for authenticated users
+- **Image fallback handling** - shows placeholder if images fail to load
 - Navbar hover effects, sticky header, footer
+- **Multi-language support** (English & Hindi)
 
-## Quick start (SQLite — no MySQL needed)
+## Quick start
 
 ### Backend
 
@@ -39,55 +42,40 @@ npm run dev
 
 Open: `http://localhost:5173`
 
-## MySQL setup
-
-1. Install MySQL and create a database:
-
-```sql
-CREATE DATABASE amazone_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
-
-2. Copy env file and edit credentials:
-
-```bash
-cd backend
-copy .env.example .env
-```
-
-Set in `.env`:
-
-```
-DB_ENGINE=mysql
-DB_NAME=amazone_db
-DB_USER=root
-DB_PASSWORD=your_password
-DB_HOST=127.0.0.1
-DB_PORT=3306
-```
-
-3. Run migrations:
-
-```bash
-python manage.py migrate
-python manage.py runserver
-```
-
 ## Project structure
 
 ```
-frontend/     React app (Vite)
-backend/      Django + DRF API
-  api/        Products, orders, auth
+QuickCart/
+├── frontend/          React app (Vite)
+│   ├── src/
+│   │   ├── components/  Reusable UI components (ProductCard, HeroCarousel, etc.)
+│   │   ├── pages/       Page components (HomePage, CartPage, etc.)
+│   │   ├── context/     React context for auth, cart, wishlist, language
+│   │   ├── api/         API client for backend communication
+│   │   └── utils/       Utility functions (Razorpay integration)
+│   └── package.json
+└── backend/           Django + DRF API
+    ├── api/           Products, orders, auth, wishlist, addresses
+    ├── config/        Django settings and URL configuration
+    └── requirements.txt
 ```
 
 ## API routes
 
 | Method | Path | Description |
 |--------|------|-------------|
-| GET | `/api/products/` | Product list |
+| GET | `/api/` | API root with endpoints info |
+| GET | `/api/health/` | Health check |
+| GET | `/api/products/` | Product list with search/filter |
+| GET | `/api/products/:slug/` | Product detail |
 | POST | `/api/auth/register/` | Create account |
 | POST | `/api/auth/login/` | Sign in |
 | GET/POST | `/api/orders/` | Orders (auth required) |
+| GET/POST | `/api/wishlist/` | Wishlist (auth required) |
+| DELETE | `/api/wishlist/:id/` | Remove from wishlist |
+| GET/POST | `/api/addresses/` | User addresses (auth required) |
+| POST | `/api/payments/razorpay/create/` | Create Razorpay order |
+| GET | `/api/payments/razorpay/config/` | Razorpay configuration status |
 
 ## Admin panel
 
@@ -107,7 +95,7 @@ Django built-in admin: `http://127.0.0.1:8000/admin/`
 1. Browse home → hover a product → **Add to cart** (or click for product page)
 2. Use **search bar** in header to find products
 3. Open **Cart** → **Proceed to checkout** (sign in if needed)
-4. Pick payment method → **Pay**
+4. Pick payment method → **Pay** (demo mode available for testing)
 5. View order on **Returns & Orders**
 
 ## New routes
@@ -117,3 +105,30 @@ Django built-in admin: `http://127.0.0.1:8000/admin/`
 | `/search?q=...&category=...` | Search results |
 | `/product/wireless-headphones` | Product detail |
 | `/admin` | Staff admin panel |
+| `/wishlist` | User wishlist |
+| `/account` | User account settings |
+
+## Image Handling
+
+The application uses external image URLs (Unsplash) for products and banners. If images fail to load, a fallback placeholder is automatically displayed. This ensures the UI remains functional even if image sources are unavailable.
+
+## Payment Integration
+
+- **Razorpay** integration for real payments (requires API keys in `.env`)
+- **Demo mode** available for testing without real payment
+- Supports COD, UPI, Card, Net Banking, and Wallet payment methods
+
+## Technology Stack
+
+- **Frontend**: React 18, Vite, React Router, FontAwesome
+- **Backend**: Django 5.2, Django REST Framework, Token Authentication
+- **Database**: SQLite (default)
+- **Payment**: Razorpay (with demo mode)
+
+## Troubleshooting
+
+- **Images not loading**: Check your internet connection (images are loaded from Unsplash CDN)
+- **CORS errors**: Ensure backend is running on `http://127.0.0.1:8000`
+- **Database errors**: For SQLite, delete `db.sqlite3` and run `python manage.py migrate` again
+- **Frontend build errors**: Delete `node_modules` and run `npm install` again
+- **Port already in use**: Change the port in `vite.config.js` or kill the process using the port
